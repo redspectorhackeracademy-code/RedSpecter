@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learning Roadmap</title>
+
+<style>
+
+/* ===== GLOBAL RESET ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html, body{
+  overflow-x:hidden;
+}
+
+body{
+  background:#05080d;
+  font-family:Segoe UI, sans-serif;
+  color:#fff;
+}
+
+/* ===== ROADMAP SECTION ===== */
+.roadmap{
+  padding:80px 20px;
+}
+
+.roadmap-title{
+  text-align:center;
+  font-size:42px;
+  margin-bottom:60px;
+  font-weight:800;
+  letter-spacing:.5px;
+
+  background:linear-gradient(90deg,#00ffae,#00cfff);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  text-shadow:
+    0 0 12px rgba(0,255,174,.25),
+    0 0 28px rgba(0,207,255,.15);
+}
+
+/* ===== GRID ===== */
+.roadmap-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:40px;
+}
+
+/* ===== PLAN CARD ===== */
+.plan{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(0,255,170,0.15);
+  border-radius:20px;
+  padding:30px;
+  backdrop-filter:blur(14px);
+  position:relative;
+  transition:.35s;
+}
+
+.plan:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 60px rgba(0,255,170,0.15);
+}
+
+.plan.pro{
+  border:1px solid rgba(0,200,255,0.4);
+  box-shadow:0 0 40px rgba(0,200,255,0.15);
+}
+
+.badge{
+  position:absolute;
+  top:-12px;
+  right:20px;
+  background:linear-gradient(90deg,#00ffae,#00cfff);
+  color:#001a12;
+  padding:6px 14px;
+  font-size:12px;
+  font-weight:700;
+  border-radius:999px;
+}
+
+.plan-header h3{
+  margin-bottom:6px;
+  font-size:22px;
+}
+
+.level{
+  color:#8fa3b0;
+  font-size:14px;
+}
+
+.includes{
+  color:#00ffae;
+  font-size:13px;
+  margin-top:6px;
+}
+
+/* MODULES */
+.module{
+  margin-top:18px;
+}
+
+.module h5{
+  font-size:15px;
+  margin-bottom:6px;
+  color:#00ffae;
+}
+
+.module ul{
+  padding-left:18px;
+  color:#9fb3c0;
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* BUTTON */
+.outcome{
+  margin-top:24px;
+  text-align:center;
+}
+
+.plan-btn{
+  display:inline-block;
+  padding:14px 24px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:14px;
+  transition:all .25s ease;
+}
+
+.basic-btn{
+  color:#00ffae;
+  border:1px solid rgba(0,255,174,0.5);
+  background:rgba(0,255,174,0.08);
+}
+
+.basic-btn:hover{
+  background:#00ffae;
+  color:#001a12;
+}
+
+.pro-btn{
+  color:#fff;
+  background:linear-gradient(135deg,#ff3cac,#784ba0,#2b86c5);
+  border:none;
+  box-shadow:0 0 25px rgba(255,60,172,.4);
+}
+
+.pro-btn:hover{
+  transform:scale(1.05);
+}
+
+@media(max-width:600px){
+  .roadmap-title{font-size:32px;}
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="roadmap">
+
+<h2 class="roadmap-title">Learning Roadmap</h2>
+
+<div class="roadmap-grid">
+
+<!-- BASIC -->
+<div class="plan basic">
+
+<div class="plan-header">
+<h3>🟢 BASIC — Starter Hacker</h3>
+<p class="level">(Foundation Level)</p>
+</div>
+
+<div class="module">
+<h5>Module 1 — Web & Internet Fundamentals</h5>
+<ul>
+<li>How the Internet works</li>
+<li>Client–Server model</li>
+<li>HTTP vs HTTPS</li>
+<li>Cookies & sessions basics</li>
+</ul>
+</div>
+
+<div class="module">
+<h5>Module 2 — HTML & CSS Basics</h5>
+<ul>
+<li>HTML structure & DOM</li>
+<li>Forms and input fields</li>
+<li>Hidden fields</li>
+<li>CSS selectors</li>
+</ul>
+</div>
+
+<div class="module">
+<h5>Module 3 — JavaScript Basics</h5>
+<ul>
+<li>JavaScript fundamentals</li>
+<li>DOM basics</li>
+<li>Event handling</li>
+<li>Client-side security controls</li>
+<li>Intro to DOM XSS</li>
+</ul>
+</div>
+
+<div class="module">
+<h5>Module 4 — SQL Fundamentals</h5>
+<ul>
+<li>Database basics</li>
+<li>SELECT, INSERT, UPDATE</li>
+<li>Login query logic</li>
+<li>Intro to SQL Injection</li>
+</ul>
+</div>
+
+<div class="module">
+<h5>Module 5 — OWASP Top 10 Overview</h5>
+<ul>
+<li>What is OWASP</li>
+<li>Top 10 vulnerabilities overview</li>
+<li>Real-world examples</li>
+<li>TryHackMe free room guidance</li>
+</ul>
+</div>
+
+<div class="outcome">
+<a href="indexBASIC-Starter-Hacker.html" class="plan-btn basic-btn">
+Outcome: Strong beginner foundation
+</a>
+</div>
+
+</div>
+
+<!-- PRO -->
+<div class="plan pro">
+
+<div class="badge">⭐ Recommended</div>
+
+<div class="plan-header">
+<h3>🔵 PRO — Web Pentester</h3>
+<p class="level">(Job-Ready Level)</p>
+<p class="includes">✅ Includes everything in BASIC +</p>
+</div>
+
+<div class="module">
+<h5>Module 6 — Reconnaissance</h5>
+<ul>
+<li>Passive reconnaissance</li>
+<li>Subdomain enumeration</li>
+<li>WHOIS & DNS analysis</li>
+</ul>
+</div>
+
+<div class="module">
+<h5>Module 7 — Burp Suite Mastery</h5>
+<ul>
+<li>Burp Suite setup</li>
+<li>Proxy interception</li>
+<li>Repeater & Intruder</li>
+<li>Decoder & Comparer</li>
+<li>Real traffic analysis</li>
+</ul>
+</div>
+
+<div class="module">
+<h5>Module 8 — Advanced OWASP Exploitation</h5>
+<ul>
+<li>Advanced SQL Injection</li>
+<li>Cross-Site Scripting (XSS) deep dive</li>
+<li>IDOR vulnerabilities</li>
+<li>File upload vulnerabilities</li>
+</ul>
+</div>
+
+<div class="module">
+<h5>Module 9 — PortSwigger Labs Walkthrough</h5>
+<ul>
+<li>Guided lab solving</li>
+<li>Methodology building</li>
+<li>Payload crafting</li>
+<li>Real-world mindset</li>
+</ul>
+</div>
+
+<div class="module">
+<h5>Module 10 — Real-World Web Pentest Methodology</h5>
+<ul>
+<li>Step-by-step testing flow</li>
+<li>Target mapping</li>
+<li>Vulnerability validation</li>
+<li>Reporting basics</li>
+</ul>
+</div>
+
+<div class="outcome">
+<a href="Web Pentester.html" class="plan-btn pro-btn">
+🎯 Outcome: Ready for real web pentesting practice
+</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

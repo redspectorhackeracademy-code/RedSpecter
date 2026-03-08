@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Create Account | Redspector</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --bg:#0b0d10;
+  --panel:#12151b;
+  --red:#d91f26;
+  --text:#e6e6e6;
+  --muted:#9aa0a6;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  background: var(--panel);
+  padding: 40px;
+  width: 420px;
+  border-radius: 12px;
+  border: 1px solid #1e222b;
+}
+
+h1 { text-align: center; }
+h1 span { color: var(--red); }
+
+label {
+  display: block;
+  margin-top: 16px;
+  color: var(--muted);
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  background: #0f1217;
+  border: 1px solid #262b35;
+  color: var(--text);
+  border-radius: 6px;
+}
+
+button {
+  margin-top: 24px;
+  width: 100%;
+  padding: 14px;
+  background: var(--red);
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 13px;
+}
+
+.footer a {
+  color: var(--red);
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1><span>RED</span>SPECTOR</h1>
+
+  <form>
+    <label>Full Name</label>
+    <input type="text" required>
+
+    <label>Email</label>
+    <input type="email" required>
+
+    <label>Password</label>
+    <input type="password" required>
+
+    <label>Confirm Password</label>
+    <input type="password" required>
+
+    <button>Create Account</button>
+  </form>
+
+  <div class="footer">
+    Already have an account? <a href="login.html">Login</a>
+  </div>
+</div>
+
+</body>
+</html>
