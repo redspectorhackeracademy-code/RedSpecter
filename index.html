@@ -1,330 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Redspector Courses</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RedSpecter Cyber Academy</title>
 
 <style>
-*{box-sizing:border-box}
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(57,255,20,0.08), transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(255, 0, 89, 0.02), transparent 40%),
-    #0b0f14;
+/* ===== GLOBAL STYLE ===== */
+body{
+    margin:0;
+    font-family: 'Courier New', monospace;
+    background-color:#000;
+    color:#fff;
 }
 
-/* HEADER */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(12px);
-  background: rgba(15, 23, 42, 0.75);
-  border-bottom: 1px solid #1f2937;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 40px;
+/* ===== NAVBAR ===== */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    background:#0a0a0a;
+    border-bottom:2px solid red;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: bold;
-  color: #d91f26;
+nav h1{
+    color:red;
+    letter-spacing:2px;
 }
 
-.logo img { height: 36px; }
-
-nav a {
-  color: #cfcfcf;
-  text-decoration: none;
-  margin-left: 25px;
-  font-size: 14px;
-  position: relative;
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:25px;
 }
 
-nav a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-4px;
-  width:0%;
-  height:2px;
-  background:#d91f26;
-  transition:.25s;
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
 }
 
-nav a:hover::after{ width:100%; }
-nav a:hover{ color:#d91f26; }
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 100px 20px 70px;
+nav ul li a:hover{
+    color:red;
 }
 
-.hero h1 {
-  font-size: 46px;
-  margin-bottom: 10px;
+/* ===== HERO SECTION ===== */
+.hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(to bottom, #000, #1a0000);
 }
 
-.hero span { color: #d91f26; }
-
-.hero p {
-  color: #9aa0a6;
-  max-width: 700px;
-  margin: 15px auto 30px;
+.hero h2{
+    font-size:50px;
+    color:red;
+    text-shadow:0 0 10px red;
 }
 
-/* BUTTON */
-.btn {
-  display: inline-block;
-  padding: 12px 26px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #000;
-  background: #d91f26;
-  transition: .25s;
-  box-shadow: 0 0 18px rgba(57,255,20,.35);
+.hero p{
+    max-width:600px;
+    margin:20px 0;
+    font-size:18px;
+    color:#ccc;
 }
 
-.btn:hover {
-  transform: translateY(-2px) scale(1.05);
-  background:#d91f26;
+/* ===== BUTTON ===== */
+.btn{
+    padding:12px 25px;
+    background:red;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
+    transition:0.3s;
 }
 
-/* SECTION */
-section {
-  padding: 70px 20px;
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
+.btn:hover{
+    background:black;
+    color:red;
+    border:1px solid red;
 }
 
-.courses h2 {
-  font-size: 34px;
-  margin-bottom: 40px;
-  color:#d91f26;
+/* ===== COURSES SECTION ===== */
+.section{
+    padding:60px 40px;
+    text-align:center;
 }
 
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+.cards{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    margin-top:40px;
 }
 
-/* CARD */
-.card-link{
-  text-decoration:none;
-  color:inherit;
+.card{
+    background:#111;
+    border:1px solid red;
+    padding:25px;
+    width:250px;
+    border-radius:8px;
+    transition:0.3s;
 }
 
-.card {
-  background: rgba(17,24,39,0.65);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 30px;
-  border: 1px solid #1f2937;
-  transition: all .35s ease;
-  position: relative;
-  overflow: hidden;
-  height:100%;
+.card:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px red;
 }
 
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, transparent, rgba(57,255,20,0.18), transparent);
-  opacity: 0;
-  transition: .4s;
+.card h3{
+    color:red;
 }
 
-.card:hover::before { opacity: 1; }
-
-.card:hover {
-  transform: translateY(-10px) scale(1.025);
-  border-color:#d91f26;
-  box-shadow: 0 0 35px rgba(57,255,20,0.25);
+/* ===== FOOTER ===== */
+footer{
+    background:#0a0a0a;
+    padding:20px;
+    text-align:center;
+    border-top:2px solid red;
+    margin-top:40px;
 }
 
-.card h3 {
-  color: #d91f26;
-  font-size: 22px;
-}
-
-.card p {
-  color: #9aa0a6;
-  font-size: 14px;
-}
-
-.card ul {
-  list-style: none;
-  padding: 0;
-  margin: 18px 0;
-  text-align: left;
-}
-
-.card li {
-  margin-bottom: 8px;
-  color: #cfcfcf;
-  font-size: 14px;
-}
-
-.badge {
-  position: absolute;
-  top: 16px;
-  right: -42px;
-  background: #ff0033;
-  color: #fff;
-  padding: 6px 40px;
-  font-size: 12px;
-  transform: rotate(45deg);
-  font-weight: bold;
-}
-
-.footer {
-  text-align: center;
-  padding: 40px;
-  color: #2b69e6;
-  font-size: 13px;
-}
-
-@media(max-width:768px){
-  header{ padding:14px 20px; }
-  .hero h1{ font-size:34px; }
-}
 </style>
 </head>
-
 <body>
 
-<header>
-  <div class="logo">
-    <img src="logo.png" alt="Redspector Logo">
-    <span>REDSPECTOR</span>
-  </div>
-  <nav>
-    <a href="Syllabus.html">Syllabus</a>
-    <a href="#">Labs</a>
-    <a href="login.html">Apply</a>
-  </nav>
-</header>
+<nav>
+    <h1>RedSpecter</h1>
+    <ul>
+        <li><a href="rfjkt.html">Home</a></li>
+        <li><a href="Syllabus.html">Courses</a></li>
+        <li><a href="#">Labs</a></li>
+        <li><a href="apply.html">Contact</a></li>
+    </ul>
+</nav>
 
-<!-- HERO -->
 <section class="hero">
-  <h1>Precision in <span>Offense</span></h1>
-  <p>
-    Red Team–only cybersecurity academy focused on real-world web application
-    penetration testing and offensive security.
-  </p>
-  <a href="apply.html" class="btn">Apply Now</a>
+    <h2>CYBERSECURITY ACADEMY</h2>
+    <p>Master Ethical Hacking, Red Teaming, Web Exploitation and AI-driven Cyber Defense. 
+    Learn like a hacker. Think like a defender.</p>
+    <a href="Syllabus.html" class="btn">Start Learning</a>
 </section>
 
-<!-- WHAT WE TEACH -->
-<section>
-  <h2>What We Teach</h2>
-  <p>Everything is built around real-world web application penetration testing and red team methodology.</p>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Web Application Pentesting</h3>
-      <p>HTML, CSS, JavaScript, SQLi, XSS, IDOR, authentication bypass, business logic vulnerabilities.</p>
+<section class="section">
+    <h2 style="color:red;">Our Programs</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Ethical Hacking</h3>
+            <p>Learn penetration testing, recon, exploitation & reporting.</p>
+        </div>
+        <div class="card">
+            <h3>Web Security</h3>
+            <p>Master XSS, SQLi, CSRF, IDOR & modern web attacks.</p>
+        </div>
+        <div class="card">
+            <h3>Red Team Ops</h3>
+            <p>Advanced adversary simulation & post-exploitation.</p>
+        </div>
     </div>
-
-    <div class="card">
-      <h3>Programming for Offense</h3>
-      <p>Python, Java, C and C++ fundamentals to understand internals and build exploits.</p>
-    </div>
-
-    <div class="card">
-      <h3>Red Team Operations</h3>
-      <p>Initial access, privilege escalation, lateral movement, OPSEC and mindset.</p>
-    </div>
-
-    <div class="card">
-      <h3>Hands-on Labs</h3>
-      <p>PortSwigger labs, TryHackMe free rooms, and custom Redspector power labs.</p>
-    </div>
-  </div>
 </section>
 
-<!-- COURSES -->
-<section class="courses">
-  <h2>🔥 Redspector Training Programs</h2>
-
-  <div class="grid">
-
-    <a href="indexBASIC-Starter-Hacker.html" class="card-link">
-      <div class="card">
-        <h3>BASIC — Start Hacking</h3>
-        <p>Perfect for beginners starting cybersecurity from zero.</p>
-
-        <ul>
-          <li>✔ Web & Internet Fundamentals</li>
-          <li>✔ HTML & CSS Basics for Hackers</li>
-          <li>✔ JavaScript Basics</li>
-          <li>✔ SQL Fundamentals</li>
-          <li>✔OWASP Top 10 Overview</li>
-          <li>❌ Not included:</li>
-          <li>❌ Live doubt clearing</li>
-          <li>❌ Personal mentorship</li>
-          <li>❌ Advanced labs</li>
-          <li>❌Certificate</li>
-        </ul>
-
-        <p><strong style="color:#d91f26;">Duration: 2 Months</strong></p>
-      </div>
-    </a>
-
-    <a href="Web Pentester.html" class="card-link">
-      <div class="card">
-        <div class="badge">MOST POPULAR</div>
-        <h3>PRO — Web Pentester</h3>
-        <p>Real-world web application penetration testing track.</p>
-
-        <ul>
-          <li>✔ Web & Internet Fundamentals</li>
-          <li>✔ HTML & CSS Basics for Hackers</li>
-          <li>✔ JavaScript Basics</li>
-          <li>✔ SQL Fundamentals</li>
-          <li>✔ OWASP Top 10 Overview</li>
-          <li>✔ Reconnaissance & Information Gathering</li>
-          <li>✔ Burp Suite Mastery </li>
-          <li>✔ Advanced OWASP Exploitation</li>
-          <li>✔ PortSwigger Labs Walkthrough</li>
-          <li>✔ Real-World Web Pentest Methodology</li> </li>
-          
-        </ul>
-
-        <p><strong style="color:#d91f26;">Duration: 5 Months</strong></p>
-      </div>
-    </a>
-
-  </div>
-</section>
-
-<div class="footer">
-  © 2026 Redspector. All rights reserved.
-</div>
+<footer>
+    © 2026 RedSpecter Cyber Academy | Built for Hackers
+</footer>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-remove green claer
