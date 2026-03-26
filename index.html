@@ -3,298 +3,179 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>RedSpecter Cyber Academy</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-
-<style>
-
-/* ===== GLOBAL ===== */
-
-body{
-margin:0;
-background:black;
-color:white;
-font-family:'Share Tech Mono', monospace;
-}
-
-/* ===== NAVBAR ===== */
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 40px;
-background:#0a0a0a;
-border-bottom:2px solid red;
-}
-
-nav h1{
-color:red;
-font-family:'Orbitron', sans-serif;
-letter-spacing:2px;
-}
-
-nav ul{
-list-style:none;
-display:flex;
-gap:25px;
-}
-
-nav ul li a{
-text-decoration:none;
-color:white;
-transition:0.3s;
-}
-
-nav ul li a:hover{
-color:red;
-}
-
-/* ===== HERO ===== */
-
-.hero{
-height:90vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(to bottom,#000,#1a0000);
-padding:20px;
-}
-
-.hero h2{
-font-size:48px;
-color:red;
-font-family:'Orbitron', sans-serif;
-text-shadow:0 0 10px red;
-}
-
-.hero p{
-max-width:650px;
-margin:20px 0;
-font-size:18px;
-color:#ccc;
-}
-
-/* ===== BUTTON ===== */
-
-.btn{
-display:inline-block;
-padding:12px 25px;
-background:red;
-color:black;
-text-decoration:none;
-font-weight:bold;
-border-radius:6px;
-transition:0.3s;
-}
-
-.btn:hover{
-background:black;
-color:red;
-border:1px solid red;
-}
-
-/* ===== COURSES SECTION ===== */
-
-.courses{
-padding:100px 20px;
-text-align:center;
-max-width:1200px;
-margin:auto;
-}
-
-.courses h2{
-font-family:'Orbitron', sans-serif;
-font-size:32px;
-letter-spacing:2px;
-text-shadow:0 0 10px red;
-}
-
-/* GRID */
-
-.grid{
-display:flex;
-justify-content:center;
-gap:60px;
-flex-wrap:wrap;
-margin-top:60px;
-}
-
-/* CARD LINK */
-
-.card-link{
-text-decoration:none;
-color:white;
-}
-
-/* CARD */
-
-.card{
-background:linear-gradient(145deg,#0a0a0a,#111);
-border:1px solid red;
-padding:35px;
-width:320px;
-min-height:420px;
-border-radius:12px;
-
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-
-transition:0.3s;
-}
-
-/* CARD HOVER */
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 25px red;
-}
-
-.card h3{
-color:red;
-font-family:'Orbitron', sans-serif;
-}
-
-/* LIST */
-
-.card ul{
-text-align:left;
-line-height:1.9;
-margin-top:20px;
-padding-left:20px;
-}
-
-/* DURATION */
-
-.duration{
-color:#ff2b2b;
-margin-top:15px;
-font-weight:bold;
-}
-
-/* ===== FOOTER ===== */
-
-footer{
-background:#0a0a0a;
-padding:20px;
-text-align:center;
-border-top:2px solid red;
-margin-top:80px;
-}
-
-</style>
+<link rel="stylesheet" href="assets/css/style.css">
+<!-- FontAwesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-<!-- ===== NAVBAR ===== -->
+<!-- ===== NAVBAR WIDGET ===== -->
+<div id="navbar-widget"></div>
 
-<nav>
-<h1>RedSpecter</h1>
-<ul>
-<li><a href="index.html">Home</a></li>
-<li><a href="Syllabus.html">Courses</a></li>
-<li><a href="#">Labs</a></li>
-<li><a href="apply.html">Contact</a></li>
-</ul>
-</nav>
-
+<!-- ===== MAIN CONTENT ===== -->
+<main>
 
 <!-- ===== HERO ===== -->
-
-<section class="hero">
-
-<h2>CYBERSECURITY ACADEMY</h2>
-
-<p>
-Master Ethical Hacking, Red Teaming, Web Exploitation and AI-driven Cyber Defense.
-Learn like a hacker. Think like a defender.
-</p>
-
-<a href="#courses" class="btn">Start Learning</a>
-
+<section class="hero-centered">
+  <h2><span>CYBERSECURITY</span> ACADEMY</h2>
+  <p>
+    Master Ethical Hacking, Red Teaming, Web Exploitation and AI-driven Cyber Defense.
+    Learn like a hacker. Think like a defender.
+  </p>
+  <div class="buttons" style="display: flex; gap: 20px; justify-content: center; margin-top: 20px;">
+    <a href="#courses" class="btn btn-primary">View Programs</a>
+    <a href="pages/apply.html" class="btn btn-outline">Apply Now</a>
+  </div>
 </section>
 
+<!-- ===== LIVE TERMINAL ===== -->
+<section class="terminal-section">
+  <div class="terminal-window">
+    <div class="terminal-header">
+      <div class="terminal-dots"><span></span><span></span><span></span></div>
+      <div class="terminal-title">root@redspecter:~</div>
+    </div>
+    <div class="terminal-body" id="hacker-terminal">
+      <p><span class="prompt">root@redspecter:~#</span> ./start_recon.sh</p>
+      <p class="typewriter"></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="features-grid">
+  <div class="feature-card">
+    <div class="icon"><i class="fa-solid fa-server"></i></div>
+    <h3>100% Practical Labs</h3>
+    <p>Ditch the boring theory. Attack real vulnerable machines and servers simulating actual corporate environments.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon"><i class="fa-solid fa-user-secret"></i></div>
+    <h3>Elite Instructors</h3>
+    <p>Learn from active red teamers and security consultants who share undocumented techniques from the field.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon"><i class="fa-solid fa-rocket"></i></div>
+    <h3>Career Ready</h3>
+    <p>We focus on building a real-world methodology, ensuring you're ready to tackle actual pentest engagements.</p>
+  </div>
+</section>
+
+<!-- ===== THE ARSENAL ===== -->
+<section class="arsenal-section">
+  <h2 class="section-title">The <span>Arsenal</span></h2>
+  <div class="arsenal-grid">
+    <span class="tool-badge">Kali Linux</span>
+    <span class="tool-badge">Burp Suite Pro</span>
+    <span class="tool-badge">Metasploit</span>
+    <span class="tool-badge">Wireshark</span>
+    <span class="tool-badge">Nmap</span>
+    <span class="tool-badge">Python 3</span>
+    <span class="tool-badge">SQLMap</span>
+    <span class="tool-badge">Dirb / Gobuster</span>
+  </div>
+</section>
 
 <!-- ===== COURSES ===== -->
-
 <section id="courses" class="courses">
+  <h2 class="section-title">🔥 RedSpecter Training Programs</h2>
+  
+  <div class="grid">
 
-<h2>🔥 RedSpecter Training Programs</h2>
+    <!-- BASIC -->
+    <a href="pages/indexBASIC-Starter-Hacker.html" class="card-link">
+      <div class="card">
+        <h3>BASIC — Starter Hacker</h3>
+        <p>Perfect for beginners starting cybersecurity from zero.</p>
+        <ul>
+          <li>Web Fundamentals</li>
+          <li>HTML & CSS for Hackers</li>
+          <li>JavaScript Basics</li>
+          <li>SQL Fundamentals</li>
+          <li>OWASP Top 10</li>
+        </ul>
+        <p class="duration">Duration: 2 Months</p>
+        <span class="btn">View Course</span>
+      </div>
+    </a>
 
-<div class="grid">
+    <!-- PRO -->
+    <a href="pages/Web Pentester.html" class="card-link">
+      <div class="card">
+        <h3>PRO — Web Pentester</h3>
+        <p>Real-world web application penetration testing track.</p>
+        <ul>
+          <li>Reconnaissance & Information Gathering</li>
+          <li>Burp Suite Mastery</li>
+          <li>Advanced OWASP Exploitation</li>
+          <li>PortSwigger Labs Walkthrough</li>
+          <li>Real-World Web Pentest Methodology</li>
+        </ul>
+        <p class="duration">Duration: 5 Months</p>
+        <span class="btn">View Course</span>
+      </div>
+    </a>
 
-
-<!-- BASIC -->
-
-<a href="indexBASIC-Starter-Hacker.html" class="card-link">
-
-<div class="card">
-
-<h3>BASIC — Starter Hacker</h3>
-
-<p>Perfect for beginners starting cybersecurity from zero.</p>
-
-<ul>
-<li>Web Fundamentals</li>
-<li>HTML & CSS for Hackers</li>
-<li>JavaScript Basics</li>
-<li>SQL Fundamentals</li>
-<li>OWASP Top 10</li>
-</ul>
-
-<p class="duration">Duration: 2 Months</p>
-
-<span class="btn">View Course</span>
-
-</div>
-
-</a>
-
-
-<!-- PRO -->
-
-<a href="Web Pentester.html" class="card-link">
-
-<div class="card">
-
-<h3>PRO — Web Pentester</h3>
-
-<p>Real-world web application penetration testing track.</p>
-
-<ul>
-<li>Reconnaissance & Information Gathering</li>
-<li>Burp Suite Mastery</li>
-<li>Advanced OWASP Exploitation</li>
-<li>PortSwigger Labs Walkthrough</li>
-<li>Real-World Web Pentest Methodology</li>
-</ul>
-
-<p class="duration">Duration: 5 Months</p>
-
-<span class="btn">View Course</span>
-
-</div>
-
-</a>
-
-</div>
-
+  </div>
 </section>
 
+<!-- ===== FINAL CTA ===== -->
+<section class="cta-banner">
+  <h2>Ready to become the hunter?</h2>
+  <p>Join the next batch of elite security professionals. Seats are extremely limited.</p>
+  <a href="pages/apply.html" class="btn btn-primary" style="margin-top: 20px; font-size: 18px; padding: 18px 40px;">SECURE YOUR SPOT</a>
+</section>
 
-<!-- ===== FOOTER ===== -->
+</main>
 
-<footer>
+<!-- ===== FOOTER WIDGET ===== -->
+<div id="footer-widget"></div>
 
-© 2026 RedSpecter Cyber Academy | Built for Hackers
+<script>var ROOT_PATH = "./";</script>
+<script src="components/navbar.js"></script>
+<script src="components/footer.js"></script>
+<script src="assets/js/script.js"></script>
 
-</footer>
+<!-- Terminal Logic for Homepage Only -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const lines = [
+      "[+] Initiating stealth scan on target...",
+      "[+] Port 80/443 open. Web server detected.",
+      "[*] Running vulnerability assessment...",
+      "[!] CRITICAL: SQL Injection found in /login.php",
+      "[*] Dumping database hashes...",
+      "[+] 4 Administrator passwords cracked.",
+      "[+] System compromised. Root access granted.",
+      "root@redspecter:~# Are you ready?"
+    ];
+    
+    let lineIndex = 0;
+    const typewriter = document.querySelector(".typewriter");
+    
+    function typeLine() {
+      if(lineIndex < lines.length) {
+        const newLine = document.createElement('p');
+        // If last line make it prompt style color
+        if(lineIndex === lines.length - 1) {
+          newLine.innerHTML = `<span class="prompt">${lines[lineIndex].split('# ')[0]}# </span> ${lines[lineIndex].split('# ')[1]}`;
+        } else {
+          newLine.innerHTML = `<span style="color: ${lines[lineIndex].includes('CRITICAL') ? '#ff003c' : (lines[lineIndex].includes('[+]') ? '#00ffae' : '#aaa')}">${lines[lineIndex]}</span>`;
+        }
+        typewriter.appendChild(newLine);
+        lineIndex++;
+        
+        // Random typing speed simulation
+        setTimeout(typeLine, Math.floor(Math.random() * 800) + 400);
+      }
+    }
+    
+    setTimeout(typeLine, 1000);
+  });
+</script>
 
 </body>
 </html>
