@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Starter Hacker | RedSpecter</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ===== NAVBAR WIDGET ===== -->
+<div id="navbar-widget"></div>
+
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <div class="tag">Absolute Beginner</div>
+    <h1>
+      Start Your Cybersecurity Journey with Our Starter Hacker Course
+    </h1>
+    <div class="info">
+      <div class="info-box">📘 5 Modules</div>
+      <div class="info-box">📅 2 Months</div>
+      <div class="info-box">🌐 Online</div>
+    </div>
+    <div class="buttons">
+      <a href="#apply" class="btn-primary">Enroll Now</a>
+      <a href="#curriculum" class="btn-outline">Know More ↓</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="why">
+  <div class="content">
+    <h2 class="section-title">
+      Why choose <span class="highlight">Starter Hacker</span>?
+    </h2>
+    <p style="text-align: center; max-width: 800px; margin: auto;">
+      The Starter Hacker course is specially designed for absolute beginners
+      who want to enter the world of cybersecurity and ethical hacking.
+      This program builds strong foundations in Linux, networking, and web
+      security through guided labs and real-world practice.
+    </p>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section id="curriculum" class="curriculum">
+  <h2 class="section-title">Course <span>Curriculum</span></h2>
+
+  <!-- Module 1 -->
+  <div class="accordion-item">
+    <div class="accordion-header">
+      Module 1 : Web & Internet Fundamentals <span>⌄</span>
+    </div>
+    <div class="accordion-content">
+      <ul>
+        <li>How the Internet works</li>
+        <li>Client–Server model</li>
+        <li>HTTP vs HTTPS</li>
+        <li>HTTP methods & status codes</li>
+        <li>Cookies & sessions basics</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Module 2 -->
+  <div class="accordion-item">
+    <div class="accordion-header">
+      Module 2 : HTML & CSS Basics for Hackers <span>⌄</span>
+    </div>
+    <div class="accordion-content">
+      <ul>
+        <li>HTML structure & DOM</li>
+        <li>Forms and input fields</li>
+        <li>Hidden fields</li>
+        <li>CSS selectors (class, id)</li>
+        <li>Client-side validation basics</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Module 3 -->
+  <div class="accordion-item">
+    <div class="accordion-header">
+      Module 3 : JavaScript Basics <span>⌄</span>
+    </div>
+    <div class="accordion-content">
+      <ul>
+        <li>JavaScript fundamentals</li>
+        <li>DOM basics</li>
+        <li>Event handling</li>
+        <li>Client-side security controls</li>
+        <li>Intro to DOM XSS concept</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Module 4 -->
+  <div class="accordion-item">
+    <div class="accordion-header">
+      Module 4 : SQL Fundamentals <span>⌄</span>
+    </div>
+    <div class="accordion-content">
+      <ul>
+        <li>Database basics</li>
+        <li>SELECT, INSERT, UPDATE</li>
+        <li>Login query logic</li>
+        <li>Intro to SQL Injection</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Module 5 -->
+  <div class="accordion-item">
+    <div class="accordion-header">
+      Module 5 : OWASP Top 10 Overview <span>⌄</span>
+    </div>
+    <div class="accordion-content">
+      <ul>
+        <li>What is OWASP</li>
+        <li>Top 10 vulnerabilities overview</li>
+        <li>Real-world examples</li>
+        <li>Basic TryHackMe guidance</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY FORM -->
+<section id="apply" class="apply" style="margin-top: 0">
+  <div class="apply-wrap">
+    <h2 class="section-title" style="margin-bottom: 30px;">Apply Now</h2>
+    <form class="apply-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="447e3acb-c948-4eee-88af-2bd7f8b2c656">
+      <input type="hidden" name="subject" value="New Application - Redspector Hacker Academy">
+      
+      <div class="field">
+        <input type="text" name="name" placeholder=" " required>
+        <label>Full Name</label>
+      </div>
+      <div class="field">
+        <input type="email" name="email" placeholder=" " required>
+        <label>Email Address</label>
+      </div>
+      <div class="field">
+        <input type="tel" name="phone" placeholder=" " required>
+        <label>Contact Number</label>
+      </div>
+      <div class="field">
+        <input type="text" name="location" placeholder=" " required>
+        <label>Your Location</label>
+      </div>
+      <div class="field">
+        <select name="program" required>
+          <option value="" disabled selected></option>
+          <option>Starter Hacker</option>
+        </select>
+        <label>Select Program</label>
+      </div>
+      
+      <button type="submit" class="submit-btn" style="width: 100%;">Submit</button>
+      <input type="checkbox" name="botcheck" style="display:none;">
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER WIDGET ===== -->
+<div id="footer-widget"></div>
+
+<script>var ROOT_PATH = "../";</script>
+<script src="../components/navbar.js"></script>
+<script src="../components/footer.js"></script>
+<script src="../assets/js/script.js"></script>
+<script>
+document.querySelectorAll(".accordion-header").forEach(header=>{
+  header.addEventListener("click",()=>{
+    header.parentElement.classList.toggle("active");
+  });
+});
+</script>
+
+</body>
+</html>
