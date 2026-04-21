@@ -161,7 +161,7 @@
         const newLine = document.createElement('p');
         // If last line make it prompt style color
         if(lineIndex === lines.length - 1) {
-          newLine.innerHTML = `<span class="prompt">${lines[lineIndex].split('https://wa.me/8078328520 ')[0]}# </span> ${lines[lineIndex].split('# ')[1]}`;
+          newLine.innerHTML = `<span class="prompt">${lines[lineIndex].split(' #')[0]}# </span> ${lines[lineIndex].split('# ')[1]}`;
         } else {
           newLine.innerHTML = `<span style="color: ${lines[lineIndex].includes('CRITICAL') ? '#ff003c' : (lines[lineIndex].includes('[+]') ? '#00ffae' : '#aaa')}">${lines[lineIndex]}</span>`;
         }
